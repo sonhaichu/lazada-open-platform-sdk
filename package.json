@@ -3,9 +3,6 @@
   "version": "2.0.0-0",
   "description": "Lazada Open Platform SDK for Node.js",
   "main": "lib/index.js",
-  "files": [
-    "lib/"
-  ],
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch --runInBand --silent=false --colors",
