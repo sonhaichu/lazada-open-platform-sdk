@@ -136,7 +136,7 @@ const getBrands: APIAction = (
  * @param {Object} payload
  * offset :require
  */
-const GetCategorySuggestion: APIAction = (
+const getCategorySuggestion: APIAction = (
     appKey: string,
     appSecret: string,
     gateway: string,
@@ -342,5 +342,5 @@ export default {
   setImages,
   updatePriceQuantity,
   removeProduct,
-  GetCategorySuggestion,
+  getCategorySuggestion,
 }
