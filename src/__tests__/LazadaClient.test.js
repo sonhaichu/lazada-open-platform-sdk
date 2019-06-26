@@ -16,6 +16,7 @@ describe('test LazadaClient.js', () => {
       'getProducts',
       'getCategoryTree',
       'getCategoryAttributes',
+      'GetCategorySuggestion',
       'getBrands',
       'createProduct',
       'updateProduct',

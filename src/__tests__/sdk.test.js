@@ -45,6 +45,7 @@ describe('test sdk module', () => {
       'getProducts',
       'getCategoryTree',
       'getCategoryAttributes',
+      'GetCategorySuggestion',
       'getBrands',
       'createProduct',
       'updateProduct',

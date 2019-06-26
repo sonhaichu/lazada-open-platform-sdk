@@ -11,3 +11,4 @@ package-lock.json
 # editor
 .vscode/*
 !.vscode/settings.json
+.idea/*

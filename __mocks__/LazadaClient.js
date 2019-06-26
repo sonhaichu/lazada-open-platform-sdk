@@ -57,6 +57,7 @@ LazadaClient.products.getProducts = payload => {
 }
 LazadaClient.products.getCategoryTree = payload => Promise.resolve({})
 LazadaClient.products.getCategoryAttributes = payload => Promise.resolve({})
+LazadaClient.products.GetCategorySuggestion = payload => Promise.resolve({})
 LazadaClient.products.getBrands = payload => Promise.resolve({})
 LazadaClient.products.createProduct = payload => Promise.resolve({})
 LazadaClient.products.updateProduct = payload => {

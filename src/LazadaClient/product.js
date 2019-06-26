@@ -132,6 +132,32 @@ const getBrands: APIAction = (
 }
 
 /**
+ * Get category suggestion.
+ * @param {Object} payload
+ * offset :require
+ */
+const GetCategorySuggestion: APIAction = (
+    appKey: string,
+    appSecret: string,
+    gateway: string,
+    accessToken: ?string,
+    payload: { product_name: string },
+    action?: HttpAction = HTTP_ACTION.GET,
+    protocol?: Protocol = PROTOCOL.HTTPS,
+) => {
+    const apiPath = '/product/category/suggestion/get'
+    const baseURL = getScheme(protocol) + gateway
+    return LazadaRequest.get(
+        baseURL,
+        appKey,
+        appSecret,
+        apiPath,
+        undefined,
+        payload,
+    )
+}
+
+/**
  * TODO:
  * @param {Object} payload xml string
  * @ref https://open.lazada.com/doc/doc.htm?spm=a2o9m.11193535.0.0.2de238e4eebY8v#?nodeId=10557&docId=108253
@@ -316,4 +342,5 @@ export default {
   setImages,
   updatePriceQuantity,
   removeProduct,
+  GetCategorySuggestion,
 }
