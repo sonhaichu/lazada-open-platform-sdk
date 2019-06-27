@@ -260,7 +260,7 @@ const setImages: APIAction = (
   gateway: string,
   accessToken: ?string,
   payload: {
-    payload: string, // xml string
+    payload: any, // xml string
   },
   action?: HttpAction = HTTP_ACTION.GET,
   protocol?: Protocol = PROTOCOL.HTTPS,
