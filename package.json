@@ -52,6 +52,7 @@
     "babel-preset-flow": "^6.23.0",
     "flow-runtime": "^0.17.0",
     "request": "^2.87.0",
-    "request-promise": "^4.2.2"
+    "request-promise": "^4.2.2",
+    "xml-js": "^1.6.11"
   }
 }

@@ -8,6 +8,7 @@ import type { ProductFilter } from './types/Product'
 import LazadaRequest from 'src/LazadaRequest'
 import { PROTOCOL, HTTP_ACTION } from 'src/LazadaRequest/constants'
 import type { Protocol, HttpAction } from 'src/LazadaRequest/types/Request'
+import { json2xml } from 'xml-js';
 
 const getScheme = (protocol: Protocol): string => {
   return protocol === PROTOCOL.HTTP ? 'http://' : 'https://'
@@ -168,13 +169,16 @@ const createProduct: APIAction = (
   gateway: string,
   accessToken: ?string,
   payload: {
-    payload: string,
+    payload: any,
   },
   action?: HttpAction = HTTP_ACTION.GET,
   protocol?: Protocol = PROTOCOL.HTTPS,
 ) => {
   const apiPath = '/product/create'
   const baseURL = getScheme(protocol) + gateway
+  payload.payload = json2xml(payload.payload, {
+      compact: true
+  })
   return LazadaRequest.post(
     baseURL,
     appKey,
