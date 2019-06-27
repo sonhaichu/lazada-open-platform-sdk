@@ -267,6 +267,9 @@ const setImages: APIAction = (
 ) => {
   const apiPath = '/images/set'
   const baseURL = getScheme(protocol) + gateway
+  payload.payload = json2xml(payload.payload, {
+      compact: true
+  })
   return LazadaRequest.post(
     baseURL,
     appKey,
