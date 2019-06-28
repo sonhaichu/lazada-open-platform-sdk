@@ -201,7 +201,7 @@ const updateProduct: APIAction = (
   gateway: string,
   accessToken: ?string,
   payload: {
-    payload: string,
+    payload: any,
   },
   action?: HttpAction = HTTP_ACTION.GET,
   protocol?: Protocol = PROTOCOL.HTTPS,
@@ -234,7 +234,7 @@ const migrateImage: APIAction = (
   gateway: string,
   accessToken: ?string,
   payload: {
-    payload: string, // xml string
+    payload: any, // xml string
   },
   action?: HttpAction = HTTP_ACTION.GET,
   protocol?: Protocol = PROTOCOL.HTTPS,
@@ -260,7 +260,7 @@ const migrateImages: APIAction = (
     gateway: string,
     accessToken: ?string,
     payload: {
-        payload: string, // xml string
+        payload: any, // xml string
     },
     action?: HttpAction = HTTP_ACTION.GET,
     protocol?: Protocol = PROTOCOL.HTTPS,
