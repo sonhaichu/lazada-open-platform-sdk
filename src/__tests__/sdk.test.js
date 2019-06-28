@@ -50,6 +50,7 @@ describe('test sdk module', () => {
       'createProduct',
       'updateProduct',
       'migrateImage',
+      'migrateImages',
       'setImages',
       'updatePriceQuantity',
       'removeProduct',

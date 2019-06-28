@@ -208,6 +208,9 @@ const updateProduct: APIAction = (
 ) => {
   const apiPath = '/product/update'
   const baseURL = getScheme(protocol) + gateway
+  payload.payload = json2xml(payload.payload, {
+      compact: true
+  })
   return LazadaRequest.post(
     baseURL,
     appKey,
@@ -238,7 +241,9 @@ const migrateImage: APIAction = (
 ) => {
   const apiPath = '/image/migrate'
   const baseURL = getScheme(protocol) + gateway
-
+  payload.payload = json2xml(payload.payload, {
+      compact: true
+  })
   return LazadaRequest.post(
     baseURL,
     appKey,
@@ -247,6 +252,32 @@ const migrateImage: APIAction = (
     accessToken,
     payload,
   )
+}
+
+const migrateImages: APIAction = (
+    appKey: string,
+    appSecret: string,
+    gateway: string,
+    accessToken: ?string,
+    payload: {
+        payload: string, // xml string
+    },
+    action?: HttpAction = HTTP_ACTION.GET,
+    protocol?: Protocol = PROTOCOL.HTTPS,
+) => {
+    const apiPath = '/images/migrate'
+    const baseURL = getScheme(protocol) + gateway
+    payload.payload = json2xml(payload.payload, {
+        compact: true
+    })
+    return LazadaRequest.post(
+        baseURL,
+        appKey,
+        appSecret,
+        apiPath,
+        accessToken,
+        payload,
+    )
 }
 
 /**
@@ -346,6 +377,7 @@ export default {
   createProduct,
   updateProduct,
   migrateImage,
+  migrateImages,
   setImages,
   updatePriceQuantity,
   removeProduct,

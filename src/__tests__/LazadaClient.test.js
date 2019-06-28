@@ -21,6 +21,7 @@ describe('test LazadaClient.js', () => {
       'createProduct',
       'updateProduct',
       'migrateImage',
+      'migrateImages',
       'setImages',
       'updatePriceQuantity',
       'removeProduct',
