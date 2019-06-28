@@ -153,7 +153,7 @@ const getCategorySuggestion: APIAction = (
         appKey,
         appSecret,
         apiPath,
-        undefined,
+        accessToken,
         payload,
     )
 }
