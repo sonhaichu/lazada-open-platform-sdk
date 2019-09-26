@@ -97,9 +97,11 @@ const post = (
   return rp({
     method: 'POST',
     url: base + apiPath,
-    qs,
+    form: qs,
     json: true,
-    body,
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8',
+    },
   }).then(response => {
     const meta = {
       method: 'POST',
