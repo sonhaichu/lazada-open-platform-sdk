@@ -8,4 +8,7 @@
   "files.autoSave": "off",
   "flow.pathToFlow": "${workspaceFolder}/node_modules/.bin/flow",
   "markdown.extension.toc.githubCompatibility": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
 }
